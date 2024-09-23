@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit - Crypto Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h2>Crypto Website</h2>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Contact</a>
+                <a href="#">Info</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search..">
+                <button>Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="deposit-methods">
+        <h1>Choose Deposit Method</h1>
+    
+        <!-- Redirect to PayPal -->
+        <button class="deposit-btn" onclick="window.open('https://www.paypal.com/us/signin', '_blank')">PayPal</button>
+    
+        <!-- Redirect to Visa -->
+        <button class="deposit-btn" onclick="window.open('https://www.visa.com/pay-with-visa/checkout.html', '_blank')">Visa</button>
+    
+        <!-- Redirect to MasterCard -->
+        <button class="deposit-btn" onclick="window.open('https://www.mastercard.us/en-us.html', '_blank')">MasterCard</button>
+    
+        <!-- Redirect to Binance (TRC20) -->
+        <button class="deposit-btn" onclick="window.open('https://www.binance.com/en', '_blank')">Binance (TRC20)</button>
+    </section>   
+    
+    <!-- PayPal Payment Integration -->
+<script src="https://www.paypal.com/sdk/js?client-id=AUJOuwNfbFIJ4juFCP20WaAXoP1a4tIan4ys3r0ZCLrsn5VLvERGaMY7GYPSt5B9gqmIy2BIhw61tIyk"></script>
+
+<div id="paypal-button-container"></div>
+
+<script>
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '100.00' // Set price here
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name);
+                // Redirect to success page or further actions
+            });
+        }
+    }).render('#paypal-button-container');
+</script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

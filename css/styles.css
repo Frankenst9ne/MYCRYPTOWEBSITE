@@ -1,0 +1,219 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar h2 {
+    color: white;
+}
+
+.navbar nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.navbar nav a:hover {
+    text-decoration: underline;
+}
+
+.search-container {
+    display: flex;
+}
+
+.search-container input {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+}
+
+.search-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Login Page Styles */
+.login-section {
+    display: flex;
+    justify-content: flex-end;
+    height: 90vh;
+    padding-right: 100px;
+    align-items: center;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: left;
+    width: 300px;
+}
+
+.login-box h1 {
+    margin-bottom: 20px;
+}
+
+.login-box form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-box form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.login-box form button {
+    width: 108%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: limegreen;
+    cursor: pointer;
+}
+
+.login-box form button:hover {
+    background-color: #45a049;
+}
+
+/* Crypto Container */
+.crypto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.crypto {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.crypto:hover {
+    transform: scale(1.05);
+    background-color: #45a049;
+}
+
+/* Deposit Page Styles */
+.deposit-methods {
+    text-align: center;
+    padding: 50px;
+    color: aliceblue;
+}
+
+.deposit-btn {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.deposit-btn:hover {
+    background-color: #9f0000;
+}
+
+.content-section{
+    color: rgb(255, 255, 255);
+    text-shadow: #333;
+    margin-left: 2%;
+}
+
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover; /* Cover the entire screen */
+    background-position: center;
+}
+
+img {
+    max-width: 100%; /* Make sure images are responsive */
+    height: auto;
+}
+
+button, a {
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover, a:hover {
+    background-color: #45a049;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .crypto {
+        width: 100%;
+    }
+
+    .login-section {
+        padding-right: 20px;
+    }
+
+    .login-box {
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+
+
+
